@@ -1,0 +1,234 @@
+
+body{
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.90);
+    overflow: scroll;
+}
+body::-webkit-scrollbar{
+    width: 7.5px;
+    height: 100%;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+}
+
+header{
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    flex-wrap: wrap;
+    background-color: red;
+    height: 75px;
+    width: 100%;
+    border-bottom: rgb(170, 0, 0) solid 4px;
+    justify-content: space-between;
+}
+
+.contenedor1{
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+svg{ 
+    height: 35px;
+    width: 35px;
+}
+.boton{
+    width: 75px;
+    height: 75px;
+    background-color: red;
+    border-style: none;
+    cursor: pointer;
+}
+.boton:hover{
+    background-color:rgb(170, 0, 0);   
+}
+.titulo{
+    font-family: bahnschrift;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 10px;
+}
+.contenedor2{
+    display: flex;
+    align-items: center;
+    background-color: red;
+    justify-content: flex-end;
+    width: 40%;
+}
+.buscar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50%;
+}
+input{
+    width: 100%;
+    height: 100%;
+    font-family: bahnschrift;
+    font-size: 22.5px;
+    font-weight: bold;
+    background-color: rgb(25, 25, 25);
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    color: white;
+    margin-left: 10px;
+}
+.boton-lupa{
+    background-color: red;
+    border-style: none;
+    cursor: pointer;
+}
+.lupa{
+    width: 37.5px;
+    height: 37.5px;
+    padding: 10px;
+}
+.lupa:hover{
+    background: rgb(170, 19, 0);
+    border-radius: 100px;
+}
+.icon-menu{
+    font-size: 30px;
+}
+
+.p{
+    display:flex;
+    position:absolute;
+    font-family: bahnschrift;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding-top: 100px;
+    width: 100%;
+    justify-content: center;
+}
+
+/*------------------------------------------------------------*/
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 124px;
+}
+.videos div{
+    padding: 4px 4px 75px 4px;
+    margin: 4px;
+    background-color: rgba(255, 255, 255, 0.055);
+    border-radius: 15px;
+}
+.videos div iframe{
+    border-radius: 15px;
+
+}
+
+/*------------------------------------------------------------*/
+
+header nav{
+    background-color: black;
+    z-index: 1000;
+    max-width: 190px;
+    width: 95%;
+    height: calc(100% - 60px);
+    position: fixed;
+    display: none;
+    border-top: solid 4px rgba(170, 19, 0);
+    overflow: scroll;
+}
+header nav::-webkit-scrollbar{
+    width: 7.5px;
+}
+header nav::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+}
+.menu:hover nav{
+    display: block;
+}
+header nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 2.5px;
+}
+
+header nav ul li{
+    display: block;
+    position: relative;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+header nav ul li:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+ header nav ul li a{
+    color: white;
+    display: block;
+    font-family: bahnschrift;
+    text-decoration: none;
+    padding: 20px;
+    size: 100px;
+}
+
+header nav ul li a span{
+    margin-right: 10px;
+}
+
+/*---------------------------------------*/
+
+@media screen and (max-width: 800px){
+    body{
+        padding-top: 120px;
+    }
+
+    header{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        height: 110px;
+    }
+    
+    .titulo{
+        font-size: 32.5px;
+    }
+    .boton{
+        width: 60px;
+        height: 50px;
+    }
+
+    .contenedor2{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+
+    header nav{
+        width: 80%;
+        height: calc(100% - 90px);
+        left: 0%;
+        margin-top: 60px;
+        overflow: scroll;
+    }
+    header nav ul li{
+        display: block;
+    }
+
+    .videos{
+        padding-top: 50px;
+    }
+    .p{
+        margin: 10px 0px 10px 0px;
+        padding: 0px;
+        padding-top: 5px;
+    }
+}
